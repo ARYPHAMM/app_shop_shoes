@@ -91,7 +91,7 @@
           <div class="w-100 m-auto brand">
             <%= image_tag  brand.image_main_brand %>
             <div class="overlay">
-              <%= link_to category_path(:name => " " ,:brand_name => brand.brand_name,:cus => " ") do  %>
+              <%= link_to category_path(:name => brand.category.name ,:brand_name => brand.brand_name,:cus => " ") do  %>
               <%= image_tag brand.image_effect_brand %>
               <% end %>
             </div>

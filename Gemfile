@@ -24,6 +24,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'fog-aws'
 
+
 #Bootstrap 4
 gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 5.6.1'
