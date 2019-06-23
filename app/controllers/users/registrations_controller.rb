@@ -140,7 +140,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
     # devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-    params[:user][:avatar] =  User.resize_avatar(params[:user][:avatar])
+    params[:user][:avatar] =  User.resize_avatar(params[:user][:avatar]) if params[:user][:avatar] != nil
     params.require(:user).permit(:firstname,:lastname ,:email, :gender, :phone,:address,:avatar)
   end
 
@@ -150,8 +150,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def sign_up_params
-    params[:user][:avatar] =  User.resize_avatar(params[:user][:avatar])
-    params.require(:user).permit(:firstname,:lastname ,:email,:password,:phone,:address,:avatar)
+    params[:user][:avatar] =  User.resize_avatar(params[:user][:avatar]) if params[:user][:avatar] != nil
+    params.require(:user).permit(:firstname,:lastname ,:gender,:email,:password,:phone,:address,:avatar)
   end
 
   # The path used after sign up for inactive accounts.
