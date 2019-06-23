@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_20_134528) do
+ActiveRecord::Schema.define(version: 2019_06_22_123753) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -129,7 +129,7 @@ ActiveRecord::Schema.define(version: 2019_06_20_134528) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "districts", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "districts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "district_name"
     t.string "district_id"
     t.integer "province_id"
@@ -217,7 +217,7 @@ ActiveRecord::Schema.define(version: 2019_06_20_134528) do
     t.integer "status", default: 2
   end
 
-  create_table "provinces", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "provinces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "province_name"
     t.string "province_id"
   end
@@ -265,7 +265,7 @@ ActiveRecord::Schema.define(version: 2019_06_20_134528) do
     t.date "expiration"
   end
 
-  create_table "wards", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "wards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "ward_name"
     t.string "ward_id"
     t.integer "district_id"
